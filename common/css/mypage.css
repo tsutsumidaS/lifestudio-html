@@ -159,6 +159,7 @@ li { list-style: none; }
 /* flex */
 /* フォントスタイル */
 /* mypage */
+main *:focus { outline: none; }
 main .sub_head { position: relative; z-index: -1; }
 main .sub_head.out { font-size: 16px; font-size: 1.6rem; font-weight: 500; line-height: 1.38; text-align: right; color: #c7b299; }
 main .sub_head.out a { position: absolute; right: 40px; }
@@ -215,7 +216,27 @@ main section .photo_select li span.photo_checked { background: #fff; border: 2px
 main section .photo_select li span.photo_checked:after { border-left: 2px solid #c7b299; border-bottom: 2px solid #c7b299; }
 main section .photo_select li img { margin: auto; top: 0; right: 0; bottom: 0; left: 0; position: absolute; max-width: 100%; max-height: 100%; }
 main section .modal_overlay { z-index: 9997; overflow: auto; width: 100%; height: 100%; position: fixed; top: 0; left: 0; display: flex; background-color: rgba(0, 0, 0, 0.5); }
-main section .modal_overlay .modal_wrap { z-index: 9999; align-self: center; background-color: #fff; padding: 40px 50px; width: 60%; margin: 20px auto; }
+main section .modal_overlay .modal_wrap { z-index: 9999; align-self: center; width: 640px; margin: 20px auto; }
+@media screen and (max-width: 960px) { main section .modal_overlay .modal_wrap { width: 100%; padding: 0 16px; }
+  main section .modal_overlay .modal_wrap .btn, main section .modal_overlay .modal_wrap .btn_brdblk { width: 100%; } }
+main section .modal_overlay .modal_wrap .modal_in { background: #fff; padding: 4px 16px; }
+@media screen and (max-width: 960px) { main section .modal_overlay .modal_wrap .modal_in { padding: 4px 40px; } }
+main section .modal_overlay .photo_select_slider { width: 476px; max-width: none; margin: 0 auto; border: none; position: relative; }
+@media screen and (max-width: 960px) { main section .modal_overlay .photo_select_slider { width: 100%; } }
+main section .modal_overlay .photo_select_slider li { display: inline-block; border: none; padding: 40px 0 0; }
+main section .modal_overlay .photo_select_slider li .preview { position: relative; width: 100%; padding-top: 476px; margin-bottom: 38px; }
+main section .modal_overlay .photo_select_slider li .preview img { margin: auto; top: 0; right: 0; bottom: 0; left: 0; position: absolute; max-width: 100%; max-height: 100%; }
+main section .modal_overlay .photo_select_slider li p { text-align: center; }
+main section .modal_overlay .photo_select_slider .slick-list { overflow: hidden; }
+main section .modal_overlay .photo_select_slider .slick-prev, main section .modal_overlay .photo_select_slider .slick-next { font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 34px; height: 34px; margin-top: -10px; padding: 0; cursor: pointer; color: transparent; border: none; background: transparent; }
+main section .modal_overlay .photo_select_slider .slick-prev { left: -54px; }
+main section .modal_overlay .photo_select_slider .slick-prev:after { margin: auto; border-bottom: 2px solid #c7b299; border-left: 2px solid #c7b299; width: 24px; height: 24px; content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: auto; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+@media screen and (max-width: 960px) { main section .modal_overlay .photo_select_slider .slick-prev { left: -42px; }
+  main section .modal_overlay .photo_select_slider .slick-prev:after { margin: auto; border-bottom: 2px solid #c7b299; border-left: 2px solid #c7b299; width: 16px; height: 16px; content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: auto; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); } }
+main section .modal_overlay .photo_select_slider .slick-next { right: -54px; }
+main section .modal_overlay .photo_select_slider .slick-next:after { margin: auto; border-top: 2px solid #c7b299; border-right: 2px solid #c7b299; width: 24px; height: 24px; content: ""; position: absolute; top: 0; right: auto; bottom: 0; left: 0; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+@media screen and (max-width: 960px) { main section .modal_overlay .photo_select_slider .slick-next { right: -42px; }
+  main section .modal_overlay .photo_select_slider .slick-next:after { margin: auto; border-top: 2px solid #c7b299; border-right: 2px solid #c7b299; width: 16px; height: 16px; content: ""; position: absolute; top: 0; right: auto; bottom: 0; left: 0; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); } }
 main section dl { display: -webkit-box; display: -moz-box; display: -ms-box; display: box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: start; -moz-box-pack: start; -ms-flex-pack: start; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-box-align: center; -moz-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 auto; max-width: 992px; width: 90%; margin-bottom: 46px; }
 @media screen and (max-width: 960px) { main section dl { margin: 0; width: 100%; display: block; min-width: 100%; margin-bottom: 18px; } }
 main section dl dt { text-align: left; font-size: 14px; font-size: 1.4rem; line-height: 1.57; white-space: nowrap; padding-right: 16px; width: 240px; }

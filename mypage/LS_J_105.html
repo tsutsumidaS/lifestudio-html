@@ -58,11 +58,38 @@
 			<section class="mypage">
 				<div class="modal_overlay">
 					<div class="modal_wrap">
-						<span class="close"></span>
-						<div>スライダー</div>
-						<div class="edit_btns">
-							<div class="btn"><a href="#"><span>写真を決定する</span></a></div>
-							<div class="btn_brdblk"><a href="#"><span>前のページに戻る</span></a></div>
+						<div class="modal_in">
+							<span class="close"></span>
+							<ul class="photo_select_slider">
+								<li>
+									<div class="preview">
+										<img src="https://placehold.jp/600x300.png" alt="">
+									</div>
+									<p>写真番号：0000-0001</p>
+								</li>
+								<li>
+									<div class="preview">
+										<img src="https://placehold.jp/600x600.png" alt="">
+									</div>
+									<p>写真番号：0000-0002</p>
+								</li>
+								<li>
+									<div class="preview">
+										<img src="https://placehold.jp/1200x800.png" alt="">
+									</div>
+									<p>写真番号：0000-0003</p>
+								</li>
+								<li>
+									<div class="preview">
+										<img src="https://placehold.jp/200x100.png" alt="">
+									</div>
+									<p>写真番号：0000-0004</p>
+								</li>
+							</ul>
+							<div class="edit_btns">
+								<div class="btn"><a href="#"><span>この写真を選択する</span></a></div>
+								<div class="btn_brdblk"><a href="#"><span>閉じる</span></a></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -185,7 +212,16 @@
 	</footer>
 	<!-- /フッター -->
 
-	<script src="common/js/jquery-3.2.1.min.js"></script>
-	<script src="common/js/common.js"></script>
+	<script src="../common/js/jquery-3.2.1.min.js"></script>
+	<script src="../common/js/common.js"></script>
+	<script src="../common/js/slick.min.js"></script>
+	<script>
+		$(function() {
+			$('.photo_select_slider').slick({
+				fade: true,
+				draggable: false
+			});
+		});
+	</script>
 </body>
 </html>

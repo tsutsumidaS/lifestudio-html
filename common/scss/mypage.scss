@@ -7,6 +7,9 @@
 
 /* mypage */
 main{
+	*:focus {
+		outline: none;
+	}
 	.sub_head{
 		position: relative;
 		z-index: -1;
@@ -279,10 +282,93 @@ main{
 			.modal_wrap{
 				z-index: 9999;
 				align-self: center;
-				background-color: #fff;
-				padding: 40px 50px;
-				width: 60%;
+				width: 640px;
 				margin: 20px auto;
+				@media #{$tablet} {
+					width: 100%;
+					padding: 0 16px;
+					.btn,.btn_brdblk{
+						width: 100%;
+					}
+				}
+				.modal_in{
+					background: #fff;
+					padding: 4px 16px;
+					@media #{$tablet} {
+						padding: 4px 40px;
+					}
+				}
+			}
+			.photo_select_slider{
+				width: 476px;
+				max-width: none;
+				margin: 0 auto;
+				border: none;
+				position: relative;
+				@media #{$tablet} {
+					width: 100%;
+				}
+				li{
+					display: inline-block;
+					border: none;
+					padding: 40px 0 0;
+					.preview {
+						position: relative;
+						width: 100%;
+						padding-top: 476px;
+						margin-bottom: 38px;
+						img{
+							@include abs-center;
+							max-width: 100%;
+							max-height: 100%;
+						}
+					}
+					p{
+						text-align: center;
+					}
+				}
+				.slick-list{
+					overflow: hidden;
+				}
+				.slick-prev , .slick-next{
+					font-size: 0;
+					line-height: 0;
+					position: absolute;
+					top: 50%;
+					display: block;
+					width: 34px;
+					height: 34px;
+					margin-top: -10px;
+					padding: 0;
+					cursor: pointer;
+					color: transparent;
+					border: none;
+					background: transparent;
+				}
+				.slick-prev {
+					left: -54px;
+					&:after{
+						@include arrow_l($putty, $width: 24px, $top: 0, $right: 0, $bottom: 0, $left: auto);
+					}
+					@media #{$tablet} {
+						left: -42px;
+						&:after{
+							@include arrow_l($putty, $width: 16px, $top: 0, $right: 0, $bottom: 0, $left: auto);
+						}
+					}
+				}
+				.slick-next{
+					right: -54px;
+					&:after{
+						@include arrow_r($putty, $width: 24px, $top: 0, $right: auto, $bottom: 0, $left: 0);
+					}
+					@media #{$tablet} {
+						right: -42px;
+						&:after{
+							@include arrow_r($putty, $width: 16px, $top: 0, $right: auto, $bottom: 0, $left: 0);
+						}
+					}
+				}
 			}
 		}
 //		Form
